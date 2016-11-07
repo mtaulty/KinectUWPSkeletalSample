@@ -1,0 +1,24 @@
+﻿<Page
+    x:Class="KinectTestApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:KinectTestApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:w2d="using:Microsoft.Graphics.Canvas.UI.Xaml"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock
+            FontSize="36"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            TextAlignment="Center"
+            Text="No Cameras" />
+        <w2d:CanvasControl
+            x:Name="canvasControl"
+            Visibility="Collapsed"
+            SizeChanged="OnCanvasControlSizeChanged"
+            Draw="OnDraw"/>
+    </Grid>
+</Page>
