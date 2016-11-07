@@ -63,13 +63,13 @@
         };
 
         necessarySourcesAvailable = 
-          this.mediaSourceReaders.All(foo => foo.Initialise());
+          this.mediaSourceReaders.All(reader => reader.Initialise());
 
         if (necessarySourcesAvailable)
         {
-          foreach (var foo in this.mediaSourceReaders)
+          foreach (var reader in this.mediaSourceReaders)
           {
-            await foo.OpenReaderAsync();
+            await reader.OpenReaderAsync();
           }
         }
         else
